@@ -1,0 +1,33 @@
+.loading {
+
+    background: white;
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    &_spinner {
+        width: 50px;
+        height: 50px;
+        border-top: 2px solid rgb(0, 102, 255);
+        border-radius: 50%;
+        animation: spinner 1s infinite;
+    }
+
+    &_text {
+        color: rgb(0, 102, 255);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

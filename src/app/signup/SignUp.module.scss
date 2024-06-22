@@ -1,0 +1,45 @@
+.enter {
+    width: 300px;
+    margin: 40px auto;
+    border: 1px solid #000;
+    background: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    &_title {
+        font-size: 33px;
+    }
+    &_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        &_error {
+            font-size: 14px;
+            color: rgb(225, 82, 82);
+        }
+        &_text {
+
+        }
+        &_link {
+            color: rgb(0, 153, 255);
+            padding: 10px;
+            display: block;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.btn {
+
+    background: #73b770;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid white;
+    cursor: pointer;
+
+    span {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

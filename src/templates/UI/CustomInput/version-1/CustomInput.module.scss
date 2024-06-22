@@ -1,0 +1,18 @@
+.enterForm {
+    display: flex;
+    flex-direction: column;
+
+    &_name {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &_input {
+        padding: 10px;
+        outline: none;
+        color: #000;
+    }
+    &_error {
+        color: rgb(221, 112, 105);
+    }
+}

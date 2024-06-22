@@ -1,0 +1,14 @@
+.btn {
+
+    background: #4c6afe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    span {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
