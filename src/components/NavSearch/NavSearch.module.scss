@@ -1,0 +1,37 @@
+.search {
+    display: flex;
+    align-items: center;
+    max-width: 520px;
+    width: 100%;
+    gap: 5px;
+    &_block {
+        border-radius: 5px;
+        border: 1px solid #c6c0c0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 490px;
+        width: 100%;
+        height: 36px;
+        padding: 0 0 0 15px;
+    }
+    &_input {
+        padding: 5px 0;
+        display: block;
+        outline: none;
+        height: 100%;
+        width: 100%;
+    }
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(217, 213, 213);
+        max-width: 75px;
+        width: 100%;
+        height: 100% !important;
+        &_icon {
+            height: 22px;
+        }
+    }
+}
