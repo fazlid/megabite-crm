@@ -5,10 +5,13 @@ import { IUser } from '@/types/definitions';
 interface IUserStore {
   user: null | IUser;
   isAuth: boolean;
-  test: boolean;
-  setTest: (data: boolean) => void;
+  profileLinkActive: string;
+  signinTemplateCheckbox: boolean;
+
+  setSigninTemplateCheckbox: (data: boolean) => void;
   setUser: (data: IUser) => void;
   logout: () => void;
+  setProfileLinkActive: (data: string) => void;
 }
 
 const userStore = create<IUserStore>()(
@@ -17,12 +20,11 @@ const userStore = create<IUserStore>()(
       (set) => ({
         user: null,
         isAuth: false,
-        test: true,
+        profileLinkActive: 'Мои заказы',
+        signinTemplateCheckbox: false,
 
-        setTest: (data) => {
-          console.log(`Setting test to: ${data}`);
-          set({ test: data });
-        },
+        setSigninTemplateCheckbox: (data) => set({signinTemplateCheckbox: data}),
+        setProfileLinkActive: (data) => set({ profileLinkActive: data}),
         setUser: (data) => set({ user: data, isAuth: true }),
         logout: () => set({ user: null, isAuth: false }),
       }),

@@ -5,7 +5,8 @@ import React from "react";
 
 import { UserIcon, HeartIcon } from "@heroicons/react/24/outline";
 import userStore from "@/stores/userStore";
-import NavSearch from "../NavSearch/NavSearch";
+import NavSearch from "../NavCatalogSearch/NavSearch";
+import CatalogNavList from "../NavCatalogSearch/CatalogNavList";
 
 function Navbar() {
   console.log("Navbar отрисовался");
@@ -13,6 +14,7 @@ function Navbar() {
   const { isAuth, user } = userStore();
 
   return (
+    <>
     <nav className="nav border-b border-black py-[20px]">
       <div className="container flex justify-between items-center">
         <Link href="/">Logo</Link>
@@ -41,6 +43,8 @@ function Navbar() {
         )}
       </div>
     </nav>
+    <CatalogNavList/>
+    </>
   );
 }
 

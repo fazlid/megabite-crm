@@ -1,22 +1,36 @@
 "use client"
 import dynamic from 'next/dynamic';
+import React, {useState, useEffect, ReactElement} from 'react'
 
 import SignIn from './SignIn'
 import userStore from '@/stores/userStore';
+import Loading from '@/components/Loader/Loading';
 
-
-const SignInVersion1 = dynamic(() => import('@/templates/authentication/version-1/SignIn'), {
-  loading: () => <p>Loading...</p>,
+const MyComponent = dynamic(() => import(`@/templates/authentication/version-1/SignIn`), {//шаблон signUp1
+  loading: () => <Loading/>,
 });
 
  function Page() {
-  const {test} = userStore();
+
+  const [Component, setComponent] = useState<ReactElement | null>(null)
+
+  const {signinTemplateCheckbox} = userStore();
+
+  useEffect(()=> {
+
+    if(!signinTemplateCheckbox){
+      setComponent(<SignIn/>)
+    }
+    else {
+      setComponent(<MyComponent/>)
+    }
+
+  }, [signinTemplateCheckbox])
 
   return (
     <>
-    {test ? <SignInVersion1/> : <SignIn/>}
+     {Component ? Component : <Loading/> }
     </>
   )
 }
-
-export default Page 
+export default Page

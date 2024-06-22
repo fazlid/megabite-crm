@@ -8,6 +8,21 @@
         margin-bottom: 50px;
     }
 
+    &_content {
+        display: flex;
+    }
+
+    &_left {
+        width: 30%;
+    }
+
+    &_right {
+        width: 70%;
+        border: 1px solid #bbb9b9;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
     &_list {
         display: flex;
         flex-direction: column;
@@ -15,11 +30,17 @@
         margin-bottom: 30px;
     }
     &_link {
-        font-size: 16px;
-        color: #1f2026;
+        font-size: 18px;
+        font-weight: 600;
+        color: #a2a2a3;
         &.active {
             font-weight: 600;
-            color: #717480;
+            color: red !important;
         }
+    }
+    &_settings {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
